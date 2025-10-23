@@ -3,14 +3,13 @@ title: Workflow Customisation
 description: "Approval-gated workflows with readable CEL guard expressions, status-based permissions, and audit trails for regulated, multi-team processes."
 ---
 
+import Callout from '../../components/featureWidgets/Callout.astro';
+import Details from '../../components/featureWidgets/Details.astro';
 
-::: tip Why Workflows Matter
+<Callout type="tip" title="Why Workflows Matter">
 Fluvial provides flexible workflow management that allows organisations to define custom business processes for their projects and other key activities. Instead of being locked into fixed, predetermined steps, you can create workflows that match your specific operational requirements.
-:::
+</Callout>
 
-
-
-Fluvial's approval-gated workflow system addresses a critical gap in most workflow solutions. While many platforms offer basic status tracking, few provide the granular approval controls required in regulated environments.
 
 Fluvia provides the ability to:
 - Track individual approvals against specific entities
@@ -21,20 +20,19 @@ Fluvia provides the ability to:
 - Coordinate workflows across nested entity hierarchies
 
 
-::: danger Configuration vs. Logic Revolution
+<Callout type="danger" title="Readable Business Logic">
 **Traditional Systems:** Endless configuration screens, rigid rules, project-specific settings that multiply complexity.
 
-**Fluvial's Approach:** Write business logic directly in readable expressions that capture your organization's intent without technical complexity.
+**Fluvial's Approach:** Write business logic in readable expressions that capture your requirements.
 
 ```
-// Replace dozens of configuration options with one clear rule
-user.department == 'legal' and approval.risk_assessment <= 'medium' 
-  or user.role == 'managing_partner'
+// Replace configuration with clear rules
+user.department == 'legal' && approval.risk_assessment <= 'medium' 
+  || user.role == 'managing_partner'
 ```
-Instead of being locked into fixed, predetermined steps, you can create workflows that match your specific operational requirements.
-:::
+</Callout>
 
-## What Are Workflows?
+### What Are Workflows?
 
 A workflow defines the lifecycle of business objects in your organisation - such as projects, issues, or procurement processes. Each workflow consists of:
 
@@ -53,11 +51,6 @@ Workflows are versioned, allowing you to evolve your processes over time while m
 ### Permission Integration
 Each status defines exactly what actions users can perform, ensuring proper governance and access control throughout your processes.
 
-### Advanced Approval Controls
-::: warning Key Differentiator
-Fluvial's unique approval system allows workflows to require specific individuals or roles to formally approve items before transitions can occur. This approval-gated workflow capability is essential for regulated environments and often missing from competitor solutions.
-:::
-
 ### Customisable Business Logic
 Advanced users can define custom rules that determine when transitions are allowed and what happens during status changes.
 
@@ -66,19 +59,19 @@ Advanced users can define custom rules that determine when transitions are allow
 ### Status-Based Permissions
 At any given status, users only see the actions they're permitted to perform. 
 
-::: info Permission Examples
+<Callout type="info" title="Permission Examples">
 - **Draft** status: Authors can edit, save, or submit for review
 - **Under Review** status: Reviewers can approve, reject, or request changes
 - **Published** status: Limited users can archive or create amendments
-:::
+</Callout>
 
 ### Controlled Transitions
 Moving between statuses is controlled and auditable. Users can only make transitions that are explicitly defined and for which they have permission.
 
-### Approval-Gated Transitions
-::: tip Smart Transition Control
+
+<Callout type="tip" title="Approval-Gated Transitions">
 Workflows can require formal approvals before allowing critical transitions. The system tracks who has approved what, and transition rules can verify that required approvals are in place before proceeding.
-:::
+</Callout>
 
 ### Guard Expressions - Business Logic in Readable form
 
@@ -87,42 +80,42 @@ Fluvial uses "CEL" (Common Expression Language), a readable and industry-standar
 
 **Access Control Example:**
 ```
-user.roles contains 'admin' or resource.owner == user.id
+user.roles.contains('admin') || resource.owner == user.id
 ```
 
 **Data Filtering Example:**
 ```
-created_at upcoming within 24 hours and status == 'pending'
+created_at.within(duration('24h')) && status == 'pending'
 ```
 
 **Workflow Conditions Example:**
 ```
-approval.status == 'approved' and budget.remaining >= cost
+approval.status == 'approved' && budget.remaining >= cost
 ```
 
-::: info Why Guard Expressions Matter
-Guard expressions eliminate the configuration complexity that plagues other workflow systems. Instead of creating dozens of project-specific settings, you write readable business rules that capture your organization's logic directly.
-:::
+<Callout type="info" title="Guard Expressions">
+Guard expressions provide a readable way to define business rules. Instead of multiple configuration screens, you write logical conditions that capture your requirements.
+</Callout>
 
 ### Context-Aware Rules
 Workflows can incorporate business rules that consider the current state of the project, user roles, deadlines, approval status, and other contextual factors.
 
 ### Nested Workflow Scopes
-::: tip Hierarchical Business Logic
+<Callout type="tip" title="Hierarchical Business Logic">
 Fluvial supports nested workflow scopes where parent and child entities can have independent workflows that interact intelligently. A **Project** contains many **Responses**, each with their own workflow, but child workflows can trigger parent transitions when guard conditions are met.
-:::
+</Callout>
 
 **Example: Coordinated Transition Logic**
 - Child **Response** workflows attempt to transition parent **Project** from "Responding" to "Scoring"
 - Parent transition only fires when guard condition is satisfied:
 
 ```
-all_responses.status == 'submitted' and responses.count >= minimum_required
+all_responses.all(r, r.status == 'submitted') && responses.size() >= minimum_required
 ```
 
-::: info Business Rule Achievement
-This achieves the business rule *"All responses shall be considered over the same period of time"* without complex configuration - just readable logic that expresses your business intent.
-:::
+<Callout type="info" title="Business Logic">
+This expresses the business rule *"All responses shall be considered over the same period of time"* in readable logic.
+</Callout>
 
 ## Workflow Management
 
@@ -172,28 +165,28 @@ flowchart TD
     I -.-> H
 ```
 
-::: details Key Approval Gates
+
 - **Legal Review** requires lawyer approval before questions can be published
 - **Answer Review** requires domain expert approval of all responses
 - **Legal Sign-off** requires legal counsel approval of final answers before completion
-:::
 
-::: tip Guard Expression Examples
+
+<Details summary="Guard Expression Examples">
 **Legal Review Transition:**
 ```
-approvals.legal.count >= 1 and approvals.legal.any(role == 'corporate_counsel')
+approvals.legal.size() >= 1 && approvals.legal.exists(a, a.role == 'corporate_counsel')
 ```
 
 **Answer Review to Legal Sign-off:**
 ```
-responses.all(status == 'expert_approved') and risk_level <= 'medium'
+responses.all(r, r.status == 'expert_approved') && risk_level <= 'medium'
 ```
 
 **High-Risk Escalation:**
 ```
-risk_level == 'high' and approvals.count >= 2 and approvals.any(role == 'partner')
+risk_level == 'high' && approvals.size() >= 2 && approvals.exists(a, a.role == 'partner')
 ```
-:::
+</Details>
 
 ### Regulatory Compliance Questionnaire
 
@@ -222,11 +215,11 @@ flowchart TD
     I -.-> H
 ```
 
-::: warning Advanced Approval Requirements
-- **Executive Review** requires C-level approval for high-risk questionnaires
+<Callout type="warning" title="Advanced Approval Requirements">
+- **Executive Review** requires board level approval for high-risk questionnaires
 - **Legal Validation** requires both in-house and external counsel approval
 - **Filed** status only available after all required regulatory approvals logged
-:::
+</Callout>
 
 ### M&A Due Diligence Process
 
@@ -255,10 +248,10 @@ flowchart TD
     I -.-> H
 ```
 
-::: danger Multi-Tier Approval Example
+<Callout type="danger" title="Multi-Tier Approval Example">
 - **Legal Clearance** requires approval from corporate counsel and external M&A specialists
 - **Final Review** requires sign-off from deal team lead, legal counsel, and subject matter experts in each domain covered
-:::
+</Callout>
 
 ## Getting Started
 
@@ -274,29 +267,29 @@ flowchart TD
 ## Advanced Features
 
 ### Approval Logic
-::: tip Advanced Approval Features
+<Callout type="tip" title="Advanced Approval Features">
 Define complex approval requirements such as:
 - Multiple approvals required from different roles
 - Escalation rules when approvals are overdue
 - Conditional approvals based on risk levels or content analysis
 - Sequential vs. parallel approval workflows
-:::
+</Callout>
 
 ### Business Rules Engine
-::: tip Readable Business Logic
+<Callout type="tip" title="Readable Business Logic">
 Define custom business rules using the semi-technical **CEL** expression language. Control when transitions can occur based on project data, user attributes, approval status, external conditions, and business calendars - all without programming.
-:::
+</Callout>
 
 **Example Rules:**
 ```
 // Prevent weekend submissions
-submission_date.weekday not in ['saturday', 'sunday']
+!(submission_date.getDayOfWeek() in [0, 6])
 
 // Require senior approval for large budgets  
-budget.total > 100000 and approvals.any(seniority >= 'director')
+budget.total > 100000 && approvals.exists(a, a.seniority >= 'director')
 
 // Coordinate parent-child workflows
-child_workflows.all(status in ['completed', 'approved'])
+child_workflows.all(w, w.status in ['completed', 'approved'])
 ```
 
 ### Integration Capabilities
@@ -314,23 +307,17 @@ Large enterprises can define different workflows for different business units wh
 
 ## Competitive Advantage
 
-::: warning Critical Market Gap
-Fluvial's approval-gated workflow system addresses a critical gap in most workflow solutions. While many platforms offer basic status tracking, few provide the granular approval controls required in regulated environments.
-:::
+<Callout type="info" title="Approval Tracking">
+Fluvial provides granular approval controls including:
+- Individual approval tracking against specific entities
+- Transition gating based on approval status
+- Detailed audit trails of approvals
+- Multi-tier approval configuration
 
-::: info Key Capabilities
-The ability to:
-- Track individual approvals against specific entities
-- Gate transitions based on approval status
-- Maintain detailed audit trails of who approved what and when
-- Configure complex, multi-tier approval requirements
-:::
-
-::: tip Target Industries
-This makes Fluvial particularly valuable for legal, financial services, healthcare, and other heavily regulated industries where formal approval processes are not just preferred but legally required.
-:::
+This makes Fluvial suitable for legal, financial services, healthcare, and other regulated industries where formal approval processes are required.
+</Callout>
 
 ---
 
-Workflow customisation transforms Fluvial from a fully-functioned questionnare management tool into a platform that truly supports your unique business processes, improving efficiency while maintaining the rigorous controls and approval processes required in regulated environments.
+Workflow customisation transforms Fluvial from a assessment tool into a platform that supports unique business processes, improving efficiency while maintaining the rigorous controls and approval processes required in regulated environments.
 

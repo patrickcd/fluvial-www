@@ -21,8 +21,8 @@ The purpose of this Agreement is to ensure the lawful and compliant processing o
 ## Data Processing Terms
 
 1. **Processing Instructions**: The Processor agrees to process personal data only based on documented instructions from the Controller, unless required to do so by law.
-2. **Security of Processing**: The Processor shall implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk.
-3. **Subprocessing**: The Processor shall not engage another processor without prior specific or general written authorization from the Controller.
+2. **Security of Processing**: The Processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk.
+3. **Subprocessing**: The Processor shall not engage another processor without prior specific or general written authorisation from the Controller.
 4. **Data Subject Rights**: The Processor shall assist the Controller in ensuring compliance with the data subjects' rights under the applicable data protection laws.
 5. **Data Breach Notification**: The Processor shall notify the Controller without undue delay upon becoming aware of a personal data breach.
 

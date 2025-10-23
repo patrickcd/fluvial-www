@@ -1,9 +1,8 @@
 ---
-title: Why Fluvial TPRM is Different
-description: Fluvial is a TPRM designed for the AI age. It exposes novel levels of customization whilst leavening the complexity burder with AI integration.
+title: Fluvial TPRM Software for the AI Age 
+description: Fluvial is a TPRM designed for the AI age. It exposes novel levels of customisation whilst leavening the complexity burder with AI integration.
 ---
 
-# Fluvial - TPRM Software for the AI World
 
 ## The Waterbed Theory of Complexity
 
@@ -20,12 +19,13 @@ AI changes this assumption. Agentic AI can make API calls on behalf of the user.
 | Fluvial Feature                 |  Generic TPRM  |  Fluvial     |
 |---------------------------------|----------------|--------------|
 | Basic Surveys                   | ✅             | ✅          |
-| Full API Exposure               | ❌             | ✅          |
-| Hierachical Weighting & Scoring | ❌             | ✅          |
-| User Customised Workflow        | ❌             | ✅          |
-| Per-project Workflow            | ❌             | ✅          |
-| Agentic AI with MCP Server      | ❌             | ✅          |
-| CEL Access Policies             | ❌             | ✅          |
-| Docker Deployment               | ❌             | ✅          |
+| Full API Exposure               | ❓             | ✅          |
+| Hierachical Weighting & Scoring | ❓             | ✅          |
+| User Customised Workflow        | ❓             | ✅          |
+| Per-project Workflow            | ❓             | ✅          |
+| Agentic AI with MCP Server      | ❓             | ✅          |
+| CEL Access Policies             | ❓             | ✅          |
+| Docker Deployment               | ❓             | ✅          |
 
 
+Read our blog post for a fuller discussion of what happens [when the computer stops being the bottleneck](/blog/posts/2).

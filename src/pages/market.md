@@ -1,11 +1,10 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
-title: Fluvial Market
+title: Fluvial Market Positioning
+description: Fluvial is software for risk assessment, due diligence and vendor evaluation projects
 ---
 
-# Fluvial Diligence Market Positioing
 
-Fluvial is software for risk assessment, due diligence and vendor evaluation projects.
 
 ## Summary
 

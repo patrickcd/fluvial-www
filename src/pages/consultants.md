@@ -3,8 +3,6 @@ layout: ../layouts/MarkdownLayout.astro
 title: For Advisory Firms
 ---
 
-# For Advisory Firms
-
 ## Consultant Challenges
 
 Advisory firms conducting vendor assessments, due diligence, or compliance reviews for clients face a fundamental tension: each client engagement requires customized questionnaires, workflows, and deliverables, but building custom solutions for each project is uneconomical. Off-the-shelf platforms designed for corporate procurement or vendor risk management don't match the consultancy business model.
@@ -15,10 +13,10 @@ The result: many sophisticated advisory firms operate with a combination of spre
 
 **They're Built for End Users, Not Service Providers**
 
-Vendor risk platforms assume you're assessing vendors for your own organization. Consultancies assess vendors on behalf of clients, requiring:
+Vendor risk platforms assume you're assessing vendors for your own organisation. Consultancies assess vendors on behalf of clients, requiring:
 - Multi-client data isolation within one deployment
 - White-label capabilities for client-facing deliverables  
-- Workflow customization per client engagement
+- Workflow customisation per client engagement
 - Ability to build proprietary reference databases from client work
 
 Most platforms can't separate "our data" from "client A's data" from "client B's data" without deploying separate instances, destroying economies of scale.
@@ -47,9 +45,9 @@ The platform was originally deployed at global banks managing thousands of suppl
 - Document templates (client branding and formatting)
 - Data exports (client owns their data completely)
 
-But you operate one deployment, with cross-client analytics, shared templates, and centralized administration.
+But you operate one deployment, with cross-client analytics, shared templates, and centralised administration.
 
-### 2. Workflow Customization Without Professional Services
+### 2. Workflow Customisation Without Professional Services
 
 Client A requires legal review before any vendor is approved. Client B needs technical committee sign-off above certain risk thresholds. Client C wants automatic escalation if responses aren't received within 10 days.
 
@@ -66,7 +64,7 @@ risk_score > 75 and approvals.any(role == 'technical_committee')
 days_since(request_sent) > 10 and status == 'pending'
 ```
 
-You control the business logic. Your team writes the rules. No waiting for vendor customization.
+You control the business logic. Your team writes the rules. No waiting for vendor customisation.
 
 ### 3.  Assessment Capabilities That Scale
 

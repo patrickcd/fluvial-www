@@ -10,7 +10,7 @@ Legal due diligence processes—whether for M&A transactions, corporate governan
 
 ## The Legal Due Diligence Challenge
 
-Legal teams must assess corporate structure, regulatory compliance, intellectual property portfolios, litigation exposure, and contractual relationships across potentially dozens of jurisdictions. Each area requires specialized expertise, and conclusions must be documented with sufficient detail to support transaction decisions or regulatory submissions. The information gathered often populates legal opinions, disclosure schedules, and compliance reports that become permanent transaction records.
+Legal teams must assess corporate structure, regulatory compliance, intellectual property portfolios, litigation exposure, and contractual relationships across potentially dozens of jurisdictions. Each area requires specialised expertise, and conclusions must be documented with sufficient detail to support transaction decisions or regulatory submissions. The information gathered often populates legal opinions, disclosure schedules, and compliance reports that become permanent transaction records.
 
 ## How Fluvial Supports Legal Due Diligence
 
@@ -20,7 +20,7 @@ Fluvial's [questionnaire system](/features/questionnaire) organizes legal due di
 
 ### Multi-Expert Review Workflows
 
-Legal due diligence requires coordination among specialists. The [workflow system](/features/workflow) routes corporate governance questions to M&A counsel, IP matters to patent specialists, and regulatory compliance to subject matter experts. Approval gates ensure senior partners review high-risk findings before conclusions are finalized. CEL guard expressions can require both local and international counsel approval for cross-border matters.
+Legal due diligence requires coordination among specialists. The [workflow system](/features/workflow) routes corporate governance questions to M&A counsel, IP matters to patent specialists, and regulatory compliance to subject matter experts. Approval gates ensure senior partners review high-risk findings before conclusions are finalised. CEL guard expressions can require both local and international counsel approval for cross-border matters.
 
 ### Legal Documentation Generation
 
@@ -32,9 +32,9 @@ Assessment responses populate legal deliverables through [document automation](/
 
 ## Key Capabilities for Legal Processes
 
-**Multi-Jurisdictional Assessment** - Hierarchical organization supports jurisdiction-specific legal inquiries while maintaining overall assessment structure.
+**Multi-Jurisdictional Assessment** - Hierarchical organisation supports jurisdiction-specific legal inquiries while maintaining overall assessment structure.
 
-**Expert Collaboration** - Section-level permissions ensure specialized counsel sees relevant questions while maintaining appropriate confidentiality for sensitive findings.
+**Expert Collaboration** - Section-level permissions ensure specialised counsel sees relevant questions while maintaining appropriate confidentiality for sensitive findings.
 
 **Opinion Documentation** - Questionnaire responses populate legal opinion templates, with mappings ensuring consistency between diligence findings and legal conclusions.
 

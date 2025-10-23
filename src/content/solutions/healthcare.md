@@ -5,11 +5,11 @@ description: "Healthcare and life sciences compliance with structured assessment
 
 
 
-Healthcare and life sciences organizations navigate complex regulatory frameworks requiring systematic compliance verification, quality management, and supply chain validation. Whether managing clinical trials, FDA submissions, or supplier qualifications, these organizations need rigorous assessment processes with comprehensive documentation.
+Healthcare and life sciences organisations navigate complex regulatory frameworks requiring systematic compliance verification, quality management, and supply chain validation. Whether managing clinical trials, FDA submissions, or supplier qualifications, these organisations need rigorous assessment processes with comprehensive documentation.
 
 ## The Healthcare Compliance Challenge
 
-Healthcare compliance spans clinical trial protocols, FDA submission requirements, patient safety standards, quality management systems, and supply chain integrity. Each area involves specialized regulatory requirements, and documentation must demonstrate systematic compliance verification suitable for FDA inspections or regulatory audits.
+Healthcare compliance spans clinical trial protocols, FDA submission requirements, patient safety standards, quality management systems, and supply chain integrity. Each area involves specialised regulatory requirements, and documentation must demonstrate systematic compliance verification suitable for FDA inspections or regulatory audits.
 
 ## How Fluvial Supports Healthcare Compliance
 
@@ -47,4 +47,4 @@ Throughout the trial, ongoing compliance assessments verify protocol adherence, 
 
 ---
 
-Fluvial provides healthcare organizations with the structured compliance frameworks, multi-expert review coordination, and regulatory documentation capabilities required to meet stringent healthcare regulatory requirements.
+Fluvial provides healthcare organisations with the structured compliance frameworks, multi-expert review coordination, and regulatory documentation capabilities required to meet stringent healthcare regulatory requirements.

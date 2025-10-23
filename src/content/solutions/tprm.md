@@ -5,17 +5,17 @@ description: "Assess and monitor vendors with risk-scored questionnaires, approv
 
 
 
-Organizations increasingly rely on external vendors, suppliers, and service providers, creating complex webs of third-party relationships that introduce operational, security, and compliance risks. Fluvial provides a comprehensive platform for assessing, monitoring, and managing these relationships throughout their lifecycle.
+Organisations increasingly rely on external vendors, suppliers, and service providers, creating complex webs of third-party relationships that introduce operational, security, and compliance risks. Fluvial provides a comprehensive platform for assessing, monitoring, and managing these relationships throughout their lifecycle.
 
 ## The TPRM Challenge
 
-Third-party risk management extends beyond initial vendor selection. Organizations must continuously assess vendor security posture, financial stability, regulatory compliance, and operational capabilities while maintaining audit trails that satisfy regulatory requirements. This ongoing assessment generates substantial documentation that must be maintained, updated, and made available for review.
+Third-party risk management extends beyond initial vendor selection. Organisations must continuously assess vendor security posture, financial stability, regulatory compliance, and operational capabilities while maintaining audit trails that satisfy regulatory requirements. This ongoing assessment generates substantial documentation that must be maintained, updated, and made available for review.
 
 ## How Fluvial Addresses TPRM Requirements
 
 ### Comprehensive Vendor Assessment
 
-Fluvial's [questionnaire management system](/features/questionnaire) supports multi-dimensional vendor evaluations covering security, compliance, financial stability, and operational capabilities. Hierarchical question organization allows assessment frameworks to mirror regulatory standards (SOC 2, ISO 27001, GDPR) while weighted scoring provides risk-based vendor classification.
+Fluvial's [questionnaire management system](/features/questionnaire) supports multi-dimensional vendor evaluations covering security, compliance, financial stability, and operational capabilities. Hierarchical question organisation allows assessment frameworks to mirror regulatory standards (SOC 2, ISO 27001, GDPR) while weighted scoring provides risk-based vendor classification.
 
 ### Approval-Gated Review Processes
 
@@ -23,7 +23,7 @@ The [workflow system](/features/workflow) enforces multi-tier review requirement
 
 ### Vendor Profile Documentation
 
-[Structured document automation](/features/document-management) transforms assessment responses into maintained vendor profiles. Security questionnaire responses populate vendor risk profiles that serve as reference documentation across the organization. When vendors undergo reassessment, mappings update existing profiles while JSON Patch audit trails preserve the complete history of risk rating changes.
+[Structured document automation](/features/document-management) transforms assessment responses into maintained vendor profiles. Security questionnaire responses populate vendor risk profiles that serve as reference documentation across the organisation. When vendors undergo reassessment, mappings update existing profiles while JSON Patch audit trails preserve the complete history of risk rating changes.
 
 ### Continuous Monitoring Integration
 
@@ -37,7 +37,7 @@ The [workflow system](/features/workflow) enforces multi-tier review requirement
 
 **Regulatory Audit Support** - Complete audit trails demonstrate vendor assessment rigor, approval documentation, and continuous monitoring compliance for regulatory examinations.
 
-**Reference Data Accumulation** - Organizations build proprietary vendor intelligence databases, with each assessment enriching institutional knowledge about vendor capabilities and risks.
+**Reference Data Accumulation** - Organisations build proprietary vendor intelligence databases, with each assessment enriching institutional knowledge about vendor capabilities and risks.
 
 ## Typical TPRM Workflow
 
@@ -47,4 +47,4 @@ Throughout this lifecycle, every assessment, approval decision, and risk rating 
 
 ---
 
-Fluvial transforms third-party risk management from a compliance exercise into a systematic risk intelligence capability, providing organizations with comprehensive vendor visibility while maintaining the rigorous controls required in regulated environments.
+Fluvial transforms third-party risk management from a compliance exercise into a systematic risk intelligence capability, providing organisations with comprehensive vendor visibility while maintaining the rigorous controls required in regulated environments.

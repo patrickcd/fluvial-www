@@ -1,0 +1,56 @@
+---
+interface Props {
+  type?: 'tip' | 'warning' | 'info' | 'danger';
+  title?: string;
+}
+
+const { type = 'info', title } = Astro.props;
+
+const typeConfig = {
+  tip: { 
+    icon: '💡', 
+    bgClass: 'bg-blue-500/10 dark:bg-blue-400/10',
+    borderClass: 'border-blue-500/20 dark:border-blue-400/20',
+    textClass: 'text-blue-900 dark:text-blue-100',
+    titleClass: 'text-blue-700 dark:text-blue-300',
+    defaultTitle: 'Tip' 
+  },
+  warning: { 
+    icon: '⚠️', 
+    bgClass: 'bg-yellow-500/10 dark:bg-yellow-400/10',
+    borderClass: 'border-yellow-500/20 dark:border-yellow-400/20',
+    textClass: 'text-yellow-900 dark:text-yellow-100',
+    titleClass: 'text-yellow-700 dark:text-yellow-300',
+    defaultTitle: 'Warning' 
+  },
+  info: { 
+    icon: 'ℹ️', 
+    bgClass: 'bg-green-500/10 dark:bg-green-400/10',
+    borderClass: 'border-green-500/20 dark:border-green-400/20',
+    textClass: 'text-green-900 dark:text-green-100',
+    titleClass: 'text-green-700 dark:text-green-300',
+    defaultTitle: 'Info' 
+  },
+  danger: { 
+    icon: '🚨', 
+    bgClass: 'bg-red-500/10 dark:bg-red-400/10',
+    borderClass: 'border-red-500/20 dark:border-red-400/20',
+    textClass: 'text-red-900 dark:text-red-100',
+    titleClass: 'text-red-700 dark:text-red-300',
+    defaultTitle: 'Danger' 
+  }
+};
+
+const config = typeConfig[type];
+const displayTitle = title || config.defaultTitle;
+---
+
+<div class={`callout rounded-lg border p-6 my-6 ${config.bgClass} ${config.borderClass} ${config.textClass}`}>
+  <div class={`callout-title flex items-center gap-2 mb-3 font-semibold ${config.titleClass}`}>
+    <span class="callout-icon text-lg">{config.icon}</span>
+    <span>{displayTitle}</span>
+  </div>
+  <div class="callout-content prose prose-sm dark:prose-invert max-w-none">
+    <slot />
+  </div>
+</div>

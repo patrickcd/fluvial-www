@@ -131,7 +131,7 @@ For enquiries regarding pricing or product details, please use the form below.
 
   <label>
     Company
-    <input type="text" name="company" autocomplete="organization">
+    <input type="text" name="company" autocomplete="organisation">
   </label>
 
   <label>

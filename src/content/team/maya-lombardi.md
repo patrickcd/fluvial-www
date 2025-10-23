@@ -2,7 +2,7 @@
 name: Maya Lombardi
 role: Sports Correspondent
 bio: |
-  Maya Lombardi is a sports correspondent who specializes in reporting on rising stars, fan culture, and the evolution of women's sports worldwide. With a keen eye for emerging talent and an in-depth understanding of the sports industry, she covers the most exciting developments in the world of women's athletics.
+  Maya Lombardi is a sports correspondent who specialises in reporting on rising stars, fan culture, and the evolution of women's sports worldwide. With a keen eye for emerging talent and an in-depth understanding of the sports industry, she covers the most exciting developments in the world of women's athletics.
 
   Passionate about inclusivity and representation, Maya also highlights the stories of female athletes breaking barriers and challenging stereotypes. Through her reporting, she strives to shine a spotlight on the underrepresented and overlooked aspects of the sports world.
 

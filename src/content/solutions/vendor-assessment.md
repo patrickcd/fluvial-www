@@ -10,7 +10,7 @@ Strategic sourcing and vendor selection processes require systematic evaluation 
 
 ## The Procurement Challenge
 
-Vendor selection extends beyond price comparison. Organizations must assess technical capabilities, financial stability, security posture, and operational resilience. Vendor commitments made during the selection process should flow into service level agreements, creating enforceable obligations. The entire selection process requires documentation suitable for audit and contract negotiation.
+Vendor selection extends beyond price comparison. Organisations must assess technical capabilities, financial stability, security posture, and operational resilience. Vendor commitments made during the selection process should flow into service level agreements, creating enforceable obligations. The entire selection process requires documentation suitable for audit and contract negotiation.
 
 ## How Fluvial Supports Procurement
 
@@ -34,7 +34,7 @@ Vendor commitments should become contract terms. [document automation](/features
 
 **Objective Vendor Comparison** - Weighted scoring provides quantitative vendor rankings, supporting defensible selection decisions and reducing subjective bias.
 
-**Stakeholder Coordination** - Multi-function review workflows ensure all relevant teams evaluate vendors in their areas of expertise before selection decisions are finalized.
+**Stakeholder Coordination** - Multi-function review workflows ensure all relevant teams evaluate vendors in their areas of expertise before selection decisions are finalised.
 
 **Commitment Enforcement** - Mapping vendor assessment responses to contract terms ensures vendor commitments become legally enforceable obligations.
 

@@ -1,0 +1,28 @@
+---
+interface Props {
+  summary?: string;
+  open?: boolean;
+  class?: string;
+}
+
+const { summary = 'Details', open = false, class: cls = '' } = Astro.props;
+---
+
+<details class={`details-group rounded-lg border p-4 my-4 ${cls} bg-transparent dark:bg-transparent`} open={open}>
+  <summary class="summary-flex cursor-pointer list-none flex items-center justify-between gap-3 font-semibold">
+    <span class="summary-text">{summary}</span>
+    <svg class="summary-icon h-4 w-4 transition-transform duration-150" viewBox="0 0 20 20" fill="none" aria-hidden>
+      <path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </summary>
+
+  <div class="details-content mt-3 prose prose-sm dark:prose-invert max-w-none">
+    <slot />
+  </div>
+</details>
+
+<style is:global>
+  /* rotate icon when open */
+  details[open] .summary-icon { transform: rotate(180deg); }
+  details summary::-webkit-details-marker { display: none; }
+</style>

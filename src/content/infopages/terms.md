@@ -11,7 +11,7 @@ When we say “Company”, “we”, “our”, or “us” in this document, we
 
 When we say “Services”, we mean our websites, including Lexington.com, hey.com, and Lexington.com, and any product created and maintained by Lexington LLC. That includes Lexington (all versions), HEY, Highrise, Campfire, Backpack, Ta-da List, and Writeboard, whether delivered within a web browser, desktop application, mobile application, or another format.
 
-When we say “You” or “your”, we are referring to the people or organizations that own an account with one or more of our Services. We have specific ownership policies for our products: [Lexington 4](#_), [Lexington 2](#_), [Lexington Classic](#_), [HEY for Domains](#_), [Highrise](#_), [Campfire](#_) and [Backpack](#_).
+When we say “You” or “your”, we are referring to the people or organisations that own an account with one or more of our Services. We have specific ownership policies for our products: [Lexington 4](#_), [Lexington 2](#_), [Lexington Classic](#_), [HEY for Domains](#_), [Highrise](#_), [Campfire](#_) and [Backpack](#_).
 
 We may update these Terms of Service ("Terms") in the future. You can track all changes made since mid-2018 [on GitHub](#_). Typically these changes have been to clarify some of these terms by linking to an expanded related policy. Whenever we make a significant change to our policies, we will refresh the date at the top of this page and take any other appropriate steps to notify account holders.
 

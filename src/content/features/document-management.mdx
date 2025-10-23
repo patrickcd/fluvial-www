@@ -3,19 +3,20 @@ title: Document Automation
 description: "Transform questionnaire data into professional documents automatically, with structured content management and persistent connections between source responses and final deliverables."
 ---
 
+import Callout from '../../components/featureWidgets/Callout.astro';
+import Details from '../../components/featureWidgets/Details.astro';
 
-
-::: tip From Assessment to Action
-The information you gather through questionnaires needs to end up in business documents—contracts, reports, agreements, and reference databases. Fluvial eliminates the manual copying and pasting by automatically connecting questionnaire responses to the documents you need to create.
-:::
+<Callout type="tip" title="From Assessment to Documentation">
+Information gathered through questionnaires often needs to be incorporated into business documents—contracts, reports, agreements, and reference databases. Fluvial connects questionnaire responses to document templates, reducing manual data entry.
+</Callout>
 
 ## The Challenge
 
-Most platforms stop at collecting data. After that, you're left copying information by hand into contracts, reports, and other documents. This wastes time, introduces errors, and makes updates difficult when information changes.
+After collecting questionnaire data, information typically needs to be transferred into contracts, reports, and other documents. Manual copying can be time-consuming and may introduce errors.
 
 ## How Fluvial Works
 
-Fluvial treats documents as living connections to your questionnaire data, not one-time exports.
+Fluvial connects documents to questionnaire data through defined mappings.
 
 ### Define Your Document Structure
 
@@ -78,17 +79,17 @@ While Fluvial stores document data in a structured way, you can output documents
 
 ## Building Organisational Knowledge
 
-Beyond individual projects, Fluvial helps you build a reference library of information that grows more valuable over time. Organise documents by the entities they describe (vendors, regions, industries), control who can access what information, and track how documents evolve. Every assessment you conduct can contribute to your organisation's collective knowledge.
+Beyond individual projects, Fluvial helps organize information into a reference library. Documents can be organized by the entities they describe (vendors, regions, industries), with access controls and change tracking.
 
 ## Real-World Example
 
 **Advisory Firm Building Vendor Intelligence**
 
-An advisory firm conducts vendor evaluations for clients. Rather than treating each project as isolated work, they use Fluvial to build a proprietary database of vendor information.
+An advisory firm conducts vendor evaluations for clients. They use Fluvial to build a database of vendor information.
 
-First, they create a standard vendor profile template that captures capabilities, certifications, performance history, and risk factors. When conducting a client assessment, questionnaire responses automatically populate these profiles. As they complete more projects, their vendor database grows and becomes more comprehensive.
+They create a standard vendor profile template that captures capabilities, certifications, performance history, and risk factors. When conducting a client assessment, questionnaire responses populate these profiles. As they complete more projects, their vendor database grows.
 
-For subsequent client engagements, they can reference existing vendor intelligence while keeping client-specific details confidential. Each project enhances their institutional knowledge, enabling faster, more informed recommendations. The complete audit trail also demonstrates to clients exactly how assessments were conducted and conclusions were reached.
+For subsequent client engagements, they can reference existing vendor information while keeping client-specific details confidential. The audit trail documents how assessments were conducted.
 
 Visit our [Solutions](/solutions/) to see how document automation applies to specific industries and use cases.
 
@@ -97,7 +98,7 @@ Visit our [Solutions](/solutions/) to see how document automation applies to spe
 
 Documents can move through approval processes with whatever stages you need, e.g. draft, review, approved, and published. Set up requirements for legal or compliance sign-off before documents are finalised, and trigger notifications or system updates when documents reach certain milestones. These [workflows](/features/workflow) can be customised using a [GUI workflow builder](/features/workflow) and simple expression language policies.
 
-::: details Expression Language for Workflow Control
+<Details summary="Expression Language for Workflow Control">
 Control workflow transitions using flexible business rules with Common Expression Language (CEL):
 
 ```javascript
@@ -115,10 +116,10 @@ now.getHours() >= 9 && now.getHours() < 17
 ```
 
 These expressions determine who can view, edit, or approve documents, and under what conditions workflow transitions can occur.
-:::
+</Details>
 
 ## What Makes Fluvial Different
 
-Most questionnaire platforms only offer basic export features. You get a PDF or spreadsheet, but then you're on your own to create the documents you actually need.
+Most questionnaire platforms offer basic export features—typically PDFs or spreadsheets.
 
-Fluvial maintains living connections between your source data and final documents. Information can be updated, mappings can be reused across projects, and you have a complete record of how each document was created and modified. This transforms your assessment data from isolated project artifacts into organisational assets that compound in value over time.
+Fluvial maintains connections between source data and documents. Information can be updated, mappings can be reused across projects, and the system records how documents were created and modified. This transforms your assessment data from isolated project artifacts into organisational assets that compound in value over time.
