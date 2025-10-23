@@ -108,6 +108,22 @@ const customers = defineCollection({
       }),
     }),
 });
+
+// Custom collections for VitePress migration
+const features = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
+const solutions = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
 export const collections = {
   team: team,
   customers: customers,
@@ -116,4 +132,6 @@ export const collections = {
   helpcenter: helpcenter,
   posts: postsCollection,
   integrations: integrations,
+  features: features,
+  solutions: solutions,
 };

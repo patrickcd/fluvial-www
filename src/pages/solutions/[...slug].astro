@@ -1,0 +1,47 @@
+---
+// Individual solution pages - dynamic routing
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths = (async () => {
+  const solutions = await getCollection("solutions");
+  return solutions.map((solution) => ({
+    params: { slug: solution.slug },
+    props: { solution },
+  }));
+}) satisfies GetStaticPaths;
+
+const { solution } = Astro.props;
+const { Content } = await solution.render();
+---
+
+<BaseLayout>
+  <article>
+    <Wrapper variant="standard" class="pt-48 pb-16 lg:pt-82">
+      <div class="max-w-3xl mx-auto">
+        <Text
+          tag="h1"
+          variant="displayLG"
+          class="text-base-800 text-balance"
+        >
+          {solution.data.title}
+        </Text>
+
+        {
+          solution.data.description && (
+            <Text tag="p" variant="textLG" class="mt-4 text-base-600">
+              {solution.data.description}
+            </Text>
+          )
+        }
+
+        <div class="mt-12 prose prose-lg max-w-none">
+          <Content />
+        </div>
+      </div>
+    </Wrapper>
+  </article>
+</BaseLayout>

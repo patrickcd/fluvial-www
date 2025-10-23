@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Fluvial Logo</title>
+  <desc id="desc">Abstract mountain with tributaries flowing into a lake and one river exiting, suggesting flow and control.</desc>
+
+  <style>
+    :root {
+      --laculine-primary: #0E7C86;  /* strokes & lines */
+      --laculine-accent:  #5AD1E6;  /* lake fill & highlights */
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --laculine-primary: #8BE0EA;
+        --laculine-accent:  #1B3A40;
+      }
+    }
+    .stroke { stroke: var(--laculine-primary); }
+    .fill   { fill:   var(--laculine-accent); }
+  </style>
+
+  <!-- Subtle scaling margin for crisp edges -->
+  <g transform="translate(0.5,0.5)">
+
+    <!-- Mountain ridge (abstract, faceted) -->
+    <path class="stroke" d="M80 300 L190 160 L250 220 L310 170 L432 300"
+          fill="none" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+    <!-- Snow notch / peak facets (suggests structure/control) -->
+    <path class="stroke" d="M190 160 L215 195 M250 220 L285 185"
+          fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+
+    <!-- Lake: a controlled basin (rounded capsule) -->
+    <defs>
+      <clipPath id="lake-clip">
+        <rect x="126" y="316" width="260" height="64" rx="32" ry="32"/>
+      </clipPath>
+      <linearGradient id="lake-grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="var(--laculine-accent)" stop-opacity="1"/>
+        <stop offset="100%" stop-color="var(--laculine-accent)" stop-opacity="0.85"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Lake body -->
+    <rect x="126" y="316" width="260" height="64" rx="32" ry="32"
+          fill="url(#lake-grad)" stroke="none"/>
+
+    <!-- Suggest gentle, regulated flow lines inside the lake -->
+    <g clip-path="url(#lake-clip)">
+      <path d="M140 340 C 190 352, 322 352, 372 340"
+            fill="none" class="stroke" stroke-width="6" stroke-linecap="round" opacity="0.20"/>
+      <path d="M150 356 C 205 366, 307 366, 362 356"
+            fill="none" class="stroke" stroke-width="4" stroke-linecap="round" opacity="0.18"/>
+    </g>
+
+    <!-- Tributaries (multiple inputs) -->
+    <!-- Left ridge tributary -->
+    <path class="stroke" d="M120 238 C 140 252, 160 276, 172 304"
+          fill="none" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+    <!-- Left valley tributary -->
+    <path class="stroke" d="M80 270 C 120 288, 148 306, 160 320"
+          fill="none" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+    <!-- Central chute -->
+    <path class="stroke" d="M250 220 C 245 260, 244 292, 244 316"
+          fill="none" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+    <!-- Right ridge tributary -->
+    <path class="stroke" d="M400 252 C 372 276, 342 298, 326 316"
+          fill="none" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+    <!-- Far-right feeder -->
+    <path class="stroke" d="M440 276 C 392 296, 358 312, 346 324"
+          fill="none" stroke-width="7" stroke-linecap="round" opacity="0.65"/>
+
+    <!-- Outflow (single controlled river) -->
+    <!-- Gate: a subtle notch at the lake bottom -->
+    <path d="M252 380 h8" class="stroke" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+    <!-- River: tapered with variable width (simulated by two strokes) -->
+    <path class="stroke" d="M256 380 C 256 408, 256 436, 256 472"
+          fill="none" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+    <path class="stroke" d="M256 392 C 256 420, 256 448, 256 472"
+          fill="none" stroke-width="6"  stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Optional perimeter for balance (very faint) -->
+    <rect x="64" y="120" width="384" height="368" rx="28" ry="28"
+          fill="none" class="stroke" stroke-width="2" opacity="0.08"/>
+
+  </g>
+</svg>

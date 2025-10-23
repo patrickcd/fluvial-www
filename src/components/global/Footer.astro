@@ -87,11 +87,17 @@ const footerLinks = [
           tag="p"
           variant="displaySM"
           class="md:max-w-sm text-base-800 text-balance"
-          >Stay up to date with Alfred's news.</Text
+          >Stay up to date with Fluvial news.</Text
         >
 
         <div>
-          <form class="mt-2 space-y-4" aria-label="Newsletter Signup Form">
+          <form 
+            action="/api/newsletter" 
+            method="POST" 
+            class="mt-2 space-y-4" 
+            aria-label="Newsletter Signup Form"
+            onsubmit="handleNewsletterSubmit(this); return true;"
+          >
             <div>
               <label for="email" class="sr-only">Email address</label>
               <input
@@ -103,14 +109,20 @@ const footerLinks = [
                 class="w-full text-lg bg-white border-transparent outline-none h-14 text-base-700 placeholder-base-400 focus:ring-inset focus:ring-base-800 focus:border-base-800"
               />
             </div>
+            
+            <!-- Honeypot field -->
+            <input type="text" name="website" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            
+            <!-- Turnstile widget for newsletter -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAB7VZp5GC8OufIcA"></div>
+            
             <Button
               type="submit"
               size="xl"
               variant="default"
-              type="submit"
-              class="w-full"
+              class="w-full newsletter-submit"
             >
-              Signup
+              <span class="btn-label">Signup</span>
             </Button>
           </form>
 
@@ -119,8 +131,8 @@ const footerLinks = [
             variant="textXS"
             class="mt-2 leading-relaxed text-base-500"
           >
-            By signing up, you agree that Alfred may contact you about our
-            products and services. You can unsubscribe at any time. See Alfred's
+            By signing up, you agree that Fluvial may contact you about our
+            products and services. You can unsubscribe at any time. See Fluvial's
             <a href="/infopages/privacy" class="underline hover:text-base-700"
               >Privacy Statement</a
             >
@@ -131,3 +143,23 @@ const footerLinks = [
     </div>
   </Wrapper>
 </footer>
+
+<script is:inline>
+function handleNewsletterSubmit(form) {
+  const btn = form.querySelector('button[type="submit"]');
+  const label = btn?.querySelector('.btn-label');
+  
+  if (btn) {
+    btn.disabled = true;
+    btn.setAttribute('aria-busy', 'true');
+  }
+  
+  if (label) {
+    label.textContent = 'Signing up…';
+  }
+  
+  return true;
+}
+</script>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

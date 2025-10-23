@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects
+# This file handles SPA-style routing and redirects
+
+# If you need any specific redirects, add them here
+# Example: /old-path /new-path 301

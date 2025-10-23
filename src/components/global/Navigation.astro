@@ -9,41 +9,25 @@ import Button from "@/components/fundations/elements/Button.astro";
 // Dropdowns link
 const dropdowns = [
   {
-    label: "Overview",
-    id: "menu-overview",
+    label: "Features",
+    id: "menu-features",
     items: [
-      { label: "All pages", href: "/system/overview", shortcut: "A" },
-      { label: "Colors", href: "/system/colors", shortcut: "C" },
-      { label: "Links", href: "/system/links", shortcut: "L" },
-      { label: "Buttons", href: "/system/buttons", shortcut: "B" },
-      { label: "Typography", href: "/system/typography", shortcut: "T" },
+      { label: "Questionnaires", href: "/features/questionnaire", shortcut: "Q" },
+      { label: "Workflows", href: "/features/workflow", shortcut: "W" },
+      { label: "Document Management", href: "/features/document-management", shortcut: "D" },
+      { label: "Integration", href: "/features/integration", shortcut: "I" },
+      { label: "The Difference", href: "/features/the-difference", shortcut: "T" },
     ],
-    flyout: {
-      label: "Resources",
-      items: [
-        {
-          label: "License",
-          href: "https://lexingtonthemes.com/legal/license/",
-          shortcut: "L",
-        },
-        {
-          label: "Documentation",
-          href: "https://lexingtonthemes.com/documentation/",
-          shortcut: "D",
-        },
-      ],
-    },
   },
   {
-    label: "Company",
-    id: "menu-company",
+    label: "Solutions",
+    id: "menu-solutions",
     items: [
-      { label: "About", href: "/about", shortcut: "A" },
-      { label: "Pricing", href: "/pricing", shortcut: "P" },
-      { label: "Customers", href: "/customers/home", shortcut: "C" },
-      { label: "Changelog", href: "/changelog/home", shortcut: "C" },
-      { label: "Integrations", href: "/integrations/home", shortcut: "I" },
-      { label: "Help Center", href: "/helpcenter/home", shortcut: "H" },
+      { label: "TPRM", href: "/solutions/tprm", shortcut: "T" },
+      { label: "Legal Due Diligence", href: "/solutions/legal", shortcut: "L" },
+      { label: "Compliance", href: "/solutions/compliance", shortcut: "C" },
+      { label: "Healthcare", href: "/solutions/healthcare", shortcut: "H" },
+      { label: "Vendor Assessment", href: "/solutions/vendor-assessment", shortcut: "V" },
     ],
   },
 ];
@@ -178,27 +162,27 @@ const dropdowns = [
         <Link
           size="md"
           variant="muted"
-          href="/blog/home"
-          aria-label="Go to news page"
+          href="/consultants"
+          aria-label="For Consultants"
           class="md:mr-auto"
         >
-          News
+          Consultants
         </Link>
         <Link
-          href="/forms/sign-in"
           size="md"
           variant="muted"
-          aria-label="Buy Alfred"
+          href="/market"
+          aria-label="Market"
         >
-          Log in
+          Market
         </Link>
         <Link
+          href="/contact"
           size="md"
           variant="default"
-          aria-label="Buy Alfred"
-          href="https://buy.polar.sh/polar_cl_If6pmsfFZUt7F1mjsfQjWC1EHxZDN3_u6HhhcEzUBm8"
+          aria-label="Contact Us"
         >
-          Buy Alfred
+          Contact
         </Link>
       </nav>
     </div>

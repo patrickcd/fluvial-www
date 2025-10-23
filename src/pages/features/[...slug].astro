@@ -1,0 +1,47 @@
+---
+// Individual feature pages - dynamic routing
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths = (async () => {
+  const features = await getCollection("features");
+  return features.map((feature) => ({
+    params: { slug: feature.slug },
+    props: { feature },
+  }));
+}) satisfies GetStaticPaths;
+
+const { feature } = Astro.props;
+const { Content } = await feature.render();
+---
+
+<BaseLayout>
+  <article>
+    <Wrapper variant="standard" class="pt-48 pb-16 lg:pt-82">
+      <div class="max-w-3xl mx-auto">
+        <Text
+          tag="h1"
+          variant="displayLG"
+          class="text-base-800 text-balance"
+        >
+          {feature.data.title}
+        </Text>
+
+        {
+          feature.data.description && (
+            <Text tag="p" variant="textLG" class="mt-4 text-base-600">
+              {feature.data.description}
+            </Text>
+          )
+        }
+
+        <div class="mt-12 prose prose-lg max-w-none">
+          <Content />
+        </div>
+      </div>
+    </Wrapper>
+  </article>
+</BaseLayout>
