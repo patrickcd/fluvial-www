@@ -93,7 +93,6 @@ For subsequent client engagements, they can reference existing vendor informatio
 
 Visit our [Solutions](/solutions/) to see how document automation applies to specific industries and use cases.
 
-
 ## Workflow Integration
 
 Documents can move through approval processes with whatever stages you need, e.g. draft, review, approved, and published. Set up requirements for legal or compliance sign-off before documents are finalised, and trigger notifications or system updates when documents reach certain milestones. These [workflows](/features/workflow) can be customised using a [GUI workflow builder](/features/workflow) and simple expression language policies.
@@ -117,6 +116,34 @@ now.getHours() >= 9 && now.getHours() < 17
 
 These expressions determine who can view, edit, or approve documents, and under what conditions workflow transitions can occur.
 </Details>
+
+
+## Distribution & Display
+
+Fluvial is a **data platform, not a publishing system**. Documents in Fluvial are structured data—not presentation formats like PDF or web pages. This architectural choice gives you complete control over how information is displayed and distributed.
+
+### Why Data-First?
+
+**Flexibility**: Your document data is stored as clean JSON structures that can be transformed into any format—web pages, PDFs, Word documents, PowerPoint slides, or data feeds for other systems.
+
+**Ownership**: You control the presentation layer. Use your own brand, hosting, and distribution channels. Integrate with existing systems and workflows without being locked into a proprietary publishing platform.
+
+**Future-Proof**: As presentation technologies evolve, your underlying data remains unchanged. Adopt new formats and channels without migrating or re-structuring your content.
+
+### Display Options
+
+**Self-Service**: Use our REST API to retrieve document data and render it however you need. Most development teams can integrate Fluvial data into their existing web applications, reporting tools, or document generation systems.
+
+**Managed Display Service**: For organizations that need a turnkey solution, we offer an optional managed display and distribution service. This handles hosting, formatting, and delivery of reports and documents while maintaining the same data flexibility.
+
+**Example Implementation**: See [Laculine](https://www.laculine.com), our consulting demo site. Click "Risk Ratings" to see how Fluvial document data can be rendered as interactive web reports.
+
+### Rationale
+
+In 2005, publishing data-driven reports was technically challenging—platforms needed to bundle data storage with presentation.
+
+In 2025, consuming and rendering structured data is straightforward. By separating concerns, Fluvial gives you greater flexibility for distribution, better integration with your existing systems, and freedom to evolve your presentation layer independently.
+
 
 ## What Makes Fluvial Different
 
